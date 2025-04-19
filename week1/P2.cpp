@@ -10,11 +10,11 @@ int func2(int arr[], int N){
 
 int main() {
     int N;
-    cout << "배열의 크기를 입력하세요: ";
+    cout << "배열의 크기: ";
     cin >> N;
 
-    int* arr = new int[N];
-    cout << N << "개의 정수를 입력하세요:\n";
+    int* arr = new int[N]; //heap에 메모리 동적 할당당
+    cout << N << "개의 정수 입력:\n";
     for (int i = 0; i < N; i++) {
         cin >> arr[i];
     }
@@ -22,9 +22,9 @@ int main() {
     int result = func2(arr, N);
     cout << "결과: " << result << endl;
 
-    // 메모리 해제
+    // 메모리 해제(메모리 누수 방지!)
     delete[] arr;
-    
+
     cout << "\n엔터를 누르면 종료...";
     cin.ignore(); 
     cin.get(); 
