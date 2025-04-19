@@ -10,7 +10,7 @@ int func3(int N){
 
 int main() {
     int input;
-    cout << "정수를 입력하세요: ";
+    cout << "정수를 입력하시오: ";
     cin >> input;
 
     int result = func3(input);
