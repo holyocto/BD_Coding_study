@@ -74,6 +74,7 @@ C++ 파일을 컴파일할 때 사용할 **빌드 명령어(g++)** 를 지정한
   ]
 }
 ```
+#### run build task shortcut
 ```plain text
-ctrl+shift+B: run build task
+ctrl+shift+B
 ```
