@@ -11,7 +11,7 @@ int main() {
         cout << '\n';
     }
 
-    for (int i = N; i >= 1; i--) {
+    for (int i = N - 1; i >= 1; i--) {
         for (int j = 0; j < i; j++) cout << '*';
         for (int j = 0; j < 2 * (N - i); j++) cout << ' ';
         for (int j = 0; j < i; j++) cout << '*';
