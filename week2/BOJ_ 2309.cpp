@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//뭐임티비...? 모르겠음....
 int main() {
     int arr[9];
     int sum = 0;
