@@ -12,8 +12,8 @@ int main() {
 
     sort(arr, arr + 5);
 
-    cout << sum / 5 << '\n';     // 평균
-    cout << arr[2] << '\n';      // 중앙값 (정렬 후 3번째 값)
+    cout << sum / 5 << '\n';  
+    cout << arr[2] << '\n';     
 
     return 0;
 }
