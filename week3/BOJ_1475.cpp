@@ -11,7 +11,7 @@ int main() {
         arr[N]++;
     }
     int SN = arr[6] + arr[9];
-    arr[6] = (SN + 1) / 2; //올림처리 해줘야 손실 안 잃어난다.
+    arr[6] = (SN + 1) / 2; //올림처리 해줘야 손실 안 일어난다.
     arr[9] = 0; 
     int res = *max_element(arr, arr + 9); 
     cout << res << '\n';
