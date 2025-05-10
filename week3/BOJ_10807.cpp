@@ -12,8 +12,23 @@ int main(void){
         cin >> num;
         seq.insert(num); // 중복이면 자동으로 무시됨
     }
-    vector<int> arr(seq.begin(), seq.end());
-    for(int i = 0; i<n; i++)
-        cout << arr[i] << ' ';
+    vector<int> arr(seq.begin(), seq.end());//set은 인덱스로 접근하지 못해서 벡터화 함
+//    for(int i = 0; i<n; i++)
+//        cout << arr[i] << ' '; 잘 들어갔나 확인하는 코드
     cin >> X;
+    //two-pointer 알고리즘? 모름...다시 공부해야 할 듯
+    int left = 0, right = arr.size() - 1, cnt = 0;
+
+    while (left < right) {
+        int sum = arr[left] + arr[right];
+        if (sum == X) {
+            cnt++;
+            left++;
+            right--;
+        } 
+        else if (sum < X) left++;
+        else right--;
+    }
+    cout << cnt;
+    return 0;
 }
