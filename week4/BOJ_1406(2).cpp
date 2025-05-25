@@ -1,10 +1,10 @@
-#include <bits/stdx++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 const int MX = 1000005;
 char dat[MX];
 int pre[MX];
-int nxt[dMX];
+int nxt[MX];
 int unused = 1;
 
 void insert(int addr, int num){
@@ -16,7 +16,7 @@ void insert(int addr, int num){
 	unused++;
 }
 
-void erase(int addr, int num){
+void erase(int addr){
 	nxt[pre[addr]] = nxt[addr];
 	if(nxt[addr] != -1) pre[nxt[addr]] = pre[addr];
 }
@@ -45,28 +45,30 @@ int main(void){
 	int q;
 	cin >> q;
 	while (q--){
-		char op;
+	    char op;
 		cin >> op;
 		if (op == 'P') {
-      char add;
-      cin >> add;
-      insert(cursor, add);
-      cursor = nxt[cursor];
-    }
-    else if (op == 'L') {
-      if (pre[cursor] != -1)
-	      cursor = pre[cursor];
-	  }
-	  else if (op == 'D') {
-      if (nxt[cursor] != -1)
-	      cursor = nxt[cursor];
-	  }
-	  else {
-      if (cursor != 0){
-	      erase(cursor);
-	      cursor = pre[cursor];
-      }
-	  }
+        char add;
+        cin >> add;
+        insert(cursor, add);
+        cursor = nxt[cursor];
+        }
+        else if (op == 'L') {
+            if (pre[cursor] != -1){
+	            cursor = pre[cursor];
+	        }
+        }
+	    else if (op == 'D') {
+            if (nxt[cursor] != -1) {
+	            cursor = nxt[cursor];
+	        }
+        }
+	    else {
+            if (cursor != 0){
+	            erase(cursor);
+	            cursor = pre[cursor];
+            }
+	    }
 	}
 	traversal();
 }
