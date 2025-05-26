@@ -6,6 +6,6 @@ int main(){
     int L;
     cin >> caseN;
 
-
+    
 
 }

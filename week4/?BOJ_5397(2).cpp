@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+//자꾸 틀렸다는데 뭐가 틀렸다는 건지 모르겠음
 
 const int MAX = 1000005; 
 int pre[MAX], nxt[MAX];
